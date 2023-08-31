@@ -1,0 +1,109 @@
+#' A Simulated Data Set under Left Truncation but No Right Censoring
+#'
+#'
+#' A simulated data set under left truncation but no right censoring.
+#' The left truncation time and the event time are dependent via the two covariates `Z1' and `Z2'.
+#' Under the data generating mechanism,
+#' the conditional distribution of the event time given covariates follows a Cox proportional hazards model in the full data, and
+#' the conditional distribution of the left truncation time given covariates follows a Cox proportional hazards model on the reversed time scale in the full data.
+#' The truncation rate is 29.5\%;
+#' and the truth \eqn{P^*(T>3) = 0.5755753}.
+#'
+#' @docType data
+#'
+#' @format A data frame with 500 subjects (rows) and 5 variables (columns).
+#' \describe{
+#'   \item{time}{the event time}
+#'   \item{Q}{the left truncation time}
+#'   \item{delta}{the event indicator}
+#'   \item{Z1}{a continous covariate}
+#'   \item{Z2}{a binary covariate}
+#' }
+#'
+#' @source Simulated
+#'
+#' @usage data(simu)
+#'
+#' @keywords datasets
+#'
+#' @examples
+#' data(simu)
+"simu"
+
+
+
+
+
+#' A Simulated Data Set under Left Truncation and Right Censoring where Censoring can be before Truncation
+#'
+#'
+#' A simulated data set under left truncation and right censoring where censoring can be before left truncation.
+#' The left truncation time and the event time are dependent via the two covariates `Z1' and `Z2'.
+#' Under the data generating mechanism,
+#' the conditional distribution of the censored event time X given covariates follows a Cox proportional hazards model in the full data,
+#' and the conditional distribution of the left truncation time given covariates follows a Cox proportional hazards model on the reversed time scale in the full data.
+#' The truncation rate is 29.5\%; the censoring rate is 16.5\%; \eqn{P^*(C<Q) = 0.6057};
+#' and the truth \eqn{P^*(T>3) = 0.623955}.
+#'
+#' @docType data
+#'
+#' @format A data frame with 500 rows and 5 variables.
+#' \describe{
+#'   \item{X}{the censored event time X = min(T,C)}
+#'   \item{Q}{the left truncation time}
+#'   \item{delta}{the event indicator}
+#'   \item{Z1}{a continous covariate}
+#'   \item{Z2}{a binary covariate}
+#' }
+#'
+#' @source Simulated
+#'
+#' @usage data(simu_c1)
+#'
+#' @keywords datasets
+#'
+#' @examples
+#' data(simu_c1)
+"simu_c1"
+
+
+
+
+
+
+
+
+
+
+#' A Simulated Data Set under Left Truncation and Right Censoring where Censoring is always after Truncation
+#'
+#'
+#' A simulated data set under left truncation and right censoring where censoring is always after left truncation.
+#' The left truncation time and the event time are dependent via two covariates `Z1' and `Z2'.
+#' Under the data generating mechanism,
+#' the conditional distributions of the event time given covariates follows a Cox model in the full data,
+#' and the conditional distribution of the left truncation time given covariates follows a Cox model on the reversed time scale  in the full data.
+#' The truncation rate is 29.5\%; the censoring rate is 27.1\%;
+#' and the truth \eqn{P^*(T>3) = 0.576547}.
+#'
+#' @docType data
+#'
+#' @format A data frame with 500 rows and 5 variables.
+#' \describe{
+#'   \item{X}{the censored event time X = min(T,C)}
+#'   \item{Q}{the left truncation time}
+#'   \item{delta}{the event indicator}
+#'   \item{Z1}{a continous covariate}
+#'   \item{Z2}{a binary covariate}
+#' }
+#'
+#' @source Simulated
+#'
+#' @usage data(simu_c2)
+#'
+#' @keywords datasets
+#'
+#' @examples
+#' data(simu_c2)
+"simu_c2"
+
